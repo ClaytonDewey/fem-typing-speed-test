@@ -1,0 +1,77 @@
+@use '../util' as *;
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  background: transparent;
+  font-family: inherit;
+  color: currentColor;
+  cursor: pointer;
+  line-height: 120%;
+  letter-spacing: rem(-0.3);
+  font-weight: 600;
+  transition: var(--transition);
+
+  &-primary,
+  &-secondary {
+    padding-inline: rem(24);
+    height: rem(56);
+    border-radius: rem(16);
+    font-size: var(--fs-400);
+    gap: rem(10);
+    &:focus {
+      box-shadow: 0 0 0 rem(3) hsl(var(--clr-neutral-900)),
+        0 0 0 rem(5) hsl(var(--clr-blue-400));
+      outline: rem(2) solid hsl(var(--clr-blue-400));
+      outline-offset: rem(2);
+    }
+  }
+
+  &-primary {
+    background-color: hsl(var(--clr-blue-600));
+    border-color: hsl(var(--clr-blue-600));
+    color: hsl(var(--clr-neutral-0));
+
+    &:hover {
+      background-color: hsl(var(--clr-blue-400));
+      border-color: hsl(var(--clr-blue-400));
+    }
+  }
+
+  &-secondary {
+    background-color: hsl(var(--clr-neutral-0));
+    border-color: hsl(var(--clr-neutral-0));
+    color: hsl(var(--clr-neutral-900));
+
+    &:hover {
+      background-color: hsl(var(--clr-neutral-0) / 0.9);
+      border-color: hsl(var(--clr-neutral-0) / 0.9);
+    }
+  }
+
+  &-select {
+    padding-inline: rem(10);
+    height: rem(31);
+    border-color: hsl(var(--clr-neutral-500));
+    color: hsl(var(--clr-neutral-0));
+    border-radius: rem(6);
+    font-size: var(--fs-200);
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: rem(-0.48);
+
+    &:hover {
+      border-color: hsl(var(--clr-blue-400));
+      color: hsl(var(--clr-blue-400));
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 rem(2) hsl(var(--clr-neutral-900)),
+        0 0 0 rem(4) hsl(var(--clr-blue-400));
+      outline: rem(2) solid hsl(var(--clr-blue-400));
+      outline-offset: rem(2);
+    }
+  }
+}

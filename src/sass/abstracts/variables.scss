@@ -1,0 +1,46 @@
+@use '../util' as *;
+
+:root {
+  // Colors
+  --clr-black: 0 0% 0%;
+  --clr-white: 0 100% 100%;
+
+  --clr-neutral-900: 0 0% 7%;
+  --clr-neutral-800: 0 0% 15%;
+  --clr-neutral-500: 240 3% 46%;
+  --clr-neutral-400: 240 1% 59%;
+  --clr-neutral-0: 0 0% 100%;
+
+  // Primary Colors
+  --clr-blue-600: 214 100% 55%;
+  --clr-blue-400: 210 100% 65%;
+
+  // Red
+  --clr-red-500: 354 63% 57%;
+  // Green
+  --clr-green-500: 140 63% 57%;
+
+  // Yellow
+  --clr-yellow-400: 49 85% 70%;
+
+  // Font family
+  --ff-sans: 'Sora', sans-serif;
+
+  // Font Sizes
+  --fs-700: #{rem(40)};
+  --fs-600: #{rem(32)};
+  --fs-500: #{rem(24)};
+  --fs-400: #{rem(20)};
+  --fs-300: #{rem(18)};
+  --fs-200: #{rem(16)};
+  --fs-100: #{rem(12)};
+
+  // Transitions
+  @media (prefers-reduced-motion: no-preference) {
+    --transition: all 0.3s ease-in-out;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    --transition: none;
+  }
+}

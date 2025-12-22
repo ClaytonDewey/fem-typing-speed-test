@@ -1,0 +1,54 @@
+@use '../util' as *;
+
+.text {
+  &-center {
+    text-align: center;
+  }
+
+  &-preset {
+    &-1 {
+      @include text-preset(var(--fs-600), 136%, 400, normal, rem(0.4));
+
+      &-bold {
+        @include text-preset(var(--fs-500), 120%, 700, normal, rem(0.32));
+      }
+
+      @include breakpoint(tablet) {
+        font-size: var(--fs-700);
+
+        &-bold {
+          font-size: var(--fs-700);
+        }
+      }
+    }
+
+    &-2 {
+      @include text-preset(var(--fs-500), 100%, 700, normal, 0);
+    }
+
+    &-3 {
+      @include text-preset(var(--fs-200), 120%, 400, normal, rem(-0.48));
+
+      @include breakpoint(tablet) {
+        font-size: var(--fs-400);
+        letter-spacing: rem(-0.6);
+      }
+
+      &-semi {
+        @include text-preset(var(--fs-400), 120%, 600, normal, rem(-0.3));
+      }
+    }
+
+    &-4 {
+      @include text-preset(var(--fs-300), 120%, 400, normal, rem(-0.6));
+    }
+
+    &-5 {
+      @include text-preset(var(--fs-200), 120%, 400, normal, rem(-0.48));
+    }
+
+    &-6 {
+      @include text-preset(var(--fs-100), 120%, 400, normal, 0);
+    }
+  }
+}

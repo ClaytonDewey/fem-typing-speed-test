@@ -1,0 +1,11 @@
+export { default as IconCompleted } from './Completed';
+export { default as IconDownArrow } from './DownArrow';
+export { default as Logo } from './Logo';
+export { default as LogoSmall } from './LogoSmall';
+export { default as IconPb } from './Pb';
+export { default as IconRestart } from './Restart';
+export { default as IconTrophy } from './Trophy';
+export { default as PatternConfetti } from './PatternConfetti';
+export { default as PatternStar } from './PatternStar';
+export { default as PatternAsterisk } from './PatternAterisk';
+export { default as Icon } from './Icon';
