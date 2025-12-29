@@ -1,11 +1,10 @@
-import { Button } from './components';
+import { Button, Header } from './components';
 import { Icon } from './svg';
 
 const App = () => {
   return (
     <div>
-      <h1 className='text-preset-1'>Typing Speed Test</h1>
-      <Icon name='logo' />
+      <Header />
       <br />
       <Button type='button' className='btn btn-primary'>
         Primary Button
