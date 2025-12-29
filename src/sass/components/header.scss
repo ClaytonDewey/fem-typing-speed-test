@@ -4,4 +4,38 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-block-end: rem(32);
+
+  &__score {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+
+    &-text {
+      font-size: var(--fs-200);
+      line-height: 120%;
+      letter-spacing: rem(-0.48);
+      color: hsl(var(--clr-neutral-400));
+
+      span {
+        text-transform: uppercase;
+        color: hsl(var(--clr-neutral-0));
+      }
+    }
+  }
+
+  @include breakpoint(tablet) {
+    margin-block-end: rem(40);
+
+    &_score {
+      &-text {
+        font-size: var(--fs-300);
+        letter-spacing: rem(-0.6);
+      }
+    }
+  }
+
+  @include breakpoint(desktop) {
+    margin-block-end: rem(64);
+  }
 }

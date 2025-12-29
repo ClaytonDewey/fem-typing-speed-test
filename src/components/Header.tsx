@@ -15,7 +15,12 @@ const Header = () => {
         </picture>
       </div>
       <div className='header__score'>
-        <Icon name='trophy' />
+        <div className='header__score-icon'>
+          <Icon name='trophy' />
+        </div>
+        <div className='header__score-text'>
+          Personal best: <span>92 wpm</span>
+        </div>
       </div>
     </header>
   );
