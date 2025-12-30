@@ -1,0 +1,60 @@
+@use '../util' as *;
+
+.test {
+  display: flex;
+  flex-direction: column;
+  gap: rem(32);
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+  }
+
+  &__results {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(20);
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      gap: rem(8);
+      align-items: center;
+      color: hsl(var(--clr-neutral-400));
+
+      span {
+        color: hsl(var(--clr-neutral-0));
+      }
+
+      &:nth-child(2) {
+        border-left: rem(1) solid hsl(var(--clr-neutral-700));
+        border-right: rem(1) solid hsl(var(--clr-neutral-700));
+        padding-inline: rem(20);
+        flex: 1;
+      }
+
+      &:not(:nth-child(2)) {
+        width: rem(87);
+      }
+    }
+  }
+
+  &__settings {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(10);
+    padding-block-end: rem(16);
+
+    .item {
+      flex: 1;
+      width: 100%;
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

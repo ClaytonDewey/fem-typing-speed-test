@@ -53,14 +53,12 @@
 
   &-select {
     padding-inline: rem(10);
+    gap: rem(10);
     height: rem(31);
     border-color: hsl(var(--clr-neutral-500));
     color: hsl(var(--clr-neutral-0));
     border-radius: rem(6);
-    font-size: var(--fs-200);
-    font-weight: 400;
-    line-height: 120%;
-    letter-spacing: rem(-0.48);
+    @include text-preset(var(--fs-200), 120%, 400, normal, rem(-0.48));
 
     &:hover {
       border-color: hsl(var(--clr-blue-400));

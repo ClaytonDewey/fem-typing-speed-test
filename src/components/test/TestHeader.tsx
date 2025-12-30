@@ -1,3 +1,6 @@
+import { Dropdown } from '../dropdown';
+import { Icon } from '../../svg';
+
 const TestHeader = () => {
   return (
     <header className='test__header'>
@@ -13,8 +16,43 @@ const TestHeader = () => {
         </div>
       </div>
       <div className='test__settings'>
-        <div className='item'>Difficulty</div>
-        <div className='item'>Mode</div>
+        <div className='item'>
+          <Dropdown
+            buttonText={
+              <>
+                Difficulty
+                <Icon name='down-arrow' />
+              </>
+            }
+            content={
+              <>
+                <div className='dropdown__settings'>
+                  <div className='btn btn-select'>Easy</div>
+                  <div className='btn btn-select'>Medium</div>
+                  <div className='btn btn-select'>Hard</div>
+                </div>
+              </>
+            }
+          />
+        </div>
+        <div className='item'>
+          <Dropdown
+            buttonText={
+              <>
+                Mode
+                <Icon name='down-arrow' />
+              </>
+            }
+            content={
+              <>
+                <div className='dropdown__settings'>
+                  <div className='btn btn-select'>Timed (60s)</div>
+                  <div className='btn btn-select'>Passage</div>
+                </div>
+              </>
+            }
+          />
+        </div>
       </div>
     </header>
   );
