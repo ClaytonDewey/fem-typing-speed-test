@@ -1,0 +1,28 @@
+@use '../util' as *;
+
+.dropdown {
+  position: relative;
+
+  &__content {
+    z-index: 9999;
+    top: rem(44);
+    padding-block: rem(24);
+    background-color: hsl(var(--clr-neutral-800));
+    border-radius: rem(10);
+    box-shadow: 0 rem(20) rem(50) rem(-21) rgba(0, 0, 0, 0.1);
+    width: auto;
+    position: absolute;
+    min-width: 100%;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(-5%);
+    transition: var(--transition);
+    pointer-events: none;
+
+    &.content-open {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+  }
+}
