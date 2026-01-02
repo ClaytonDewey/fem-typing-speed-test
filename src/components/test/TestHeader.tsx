@@ -1,7 +1,20 @@
 import { Dropdown } from '../dropdown';
+import { Button } from '../';
 import { Icon } from '../../svg';
+import { useTypingStore } from '../../store/useTypingStore';
 
 const TestHeader = () => {
+  const { difficulty, mode, setDifficulty, setMode } = useTypingStore();
+
+  const handleDifficultyChange = (level: 'Easy' | 'Medium' | 'Hard') => {
+    setDifficulty(level);
+  };
+
+  const handleModeChange = (selectedMode: 'Timed' | 'Passage') => {
+    setMode(selectedMode);
+  };
+
+  console.log(mode);
   return (
     <header className='test__header'>
       <div className='test__results'>
@@ -20,37 +33,77 @@ const TestHeader = () => {
           <Dropdown
             buttonText={
               <>
-                Difficulty
+                {difficulty}
                 <Icon name='down-arrow' />
               </>
             }
-            content={
+            content={({ closeDropdown }) => (
               <>
                 <div className='dropdown__settings'>
-                  <div className='btn btn-select'>Easy</div>
-                  <div className='btn btn-select'>Medium</div>
-                  <div className='btn btn-select'>Hard</div>
+                  <Button
+                    type='button'
+                    className='btn btn-select'
+                    onClick={() => {
+                      handleDifficultyChange('Easy');
+                      closeDropdown();
+                    }}>
+                    Easy
+                  </Button>
+                  <Button
+                    type='button'
+                    className='btn btn-select'
+                    onClick={() => {
+                      handleDifficultyChange('Medium');
+                      closeDropdown();
+                    }}>
+                    Medium
+                  </Button>
+                  <Button
+                    type='button'
+                    className='btn btn-select'
+                    onClick={() => {
+                      handleDifficultyChange('Hard');
+                      closeDropdown();
+                    }}>
+                    Hard
+                  </Button>
                 </div>
               </>
-            }
+            )}
           />
         </div>
         <div className='item'>
           <Dropdown
             buttonText={
               <>
-                Mode
+                {mode}
                 <Icon name='down-arrow' />
               </>
             }
-            content={
+            content={({ closeDropdown }) => (
               <>
                 <div className='dropdown__settings'>
-                  <div className='btn btn-select'>Timed (60s)</div>
-                  <div className='btn btn-select'>Passage</div>
+                  <Button
+                    type='button'
+                    className='btn btn-select'
+                    onClick={() => {
+                      handleModeChange('Timed');
+                      closeDropdown();
+                    }}>
+                    Timed (60s)
+                  </Button>
+                  <Button
+                    type='button'
+                    className='btn btn-select'
+                    onClick={() => {
+                      handleModeChange('Passage');
+                      closeDropdown();
+                    }}>
+                    Passage
+                  </Button>
                 </div>
               </>
-            }
+            )}
           />
         </div>
       </div>
