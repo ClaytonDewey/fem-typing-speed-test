@@ -42,7 +42,9 @@ const TestHeader = () => {
                 <div className='dropdown__settings'>
                   <Button
                     type='button'
-                    className='btn btn-select'
+                    className={`btn btn-select ${
+                      difficulty === 'Easy' ? 'active' : ''
+                    }`}
                     onClick={() => {
                       handleDifficultyChange('Easy');
                       closeDropdown();
@@ -51,7 +53,9 @@ const TestHeader = () => {
                   </Button>
                   <Button
                     type='button'
-                    className='btn btn-select'
+                    className={`btn btn-select ${
+                      difficulty === 'Medium' ? 'active' : ''
+                    }`}
                     onClick={() => {
                       handleDifficultyChange('Medium');
                       closeDropdown();
@@ -60,7 +64,9 @@ const TestHeader = () => {
                   </Button>
                   <Button
                     type='button'
-                    className='btn btn-select'
+                    className={`btn btn-select ${
+                      difficulty === 'Hard' ? 'active' : ''
+                    }`}
                     onClick={() => {
                       handleDifficultyChange('Hard');
                       closeDropdown();
@@ -85,7 +91,9 @@ const TestHeader = () => {
                 <div className='dropdown__settings'>
                   <Button
                     type='button'
-                    className='btn btn-select'
+                    className={`btn btn-select ${
+                      mode === 'Timed' ? 'active' : ''
+                    }`}
                     onClick={() => {
                       handleModeChange('Timed');
                       closeDropdown();
@@ -94,7 +102,9 @@ const TestHeader = () => {
                   </Button>
                   <Button
                     type='button'
-                    className='btn btn-select'
+                    className={`btn btn-select ${
+                      mode === 'Passage' ? 'active' : ''
+                    }`}
                     onClick={() => {
                       handleModeChange('Passage');
                       closeDropdown();

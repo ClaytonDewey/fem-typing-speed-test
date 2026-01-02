@@ -24,5 +24,31 @@
       transform: translateY(0);
       pointer-events: all;
     }
+
+    .btn-select {
+      position: relative;
+      border: none;
+      justify-content: flex-start;
+      padding-inline-start: rem(35);
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: rem(10);
+        width: rem(16);
+        height: rem(16);
+        border-radius: rem(8);
+        border: rem(1) solid hsl(var(--clr-neutral-0));
+        transform: translateY(-50%);
+      }
+
+      &.active {
+        &::before {
+          border-color: hsl(var(--clr-blue-600));
+          border-width: rem(4);
+        }
+      }
+    }
   }
 }
