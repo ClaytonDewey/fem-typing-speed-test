@@ -40,6 +40,7 @@ const TestHeader = () => {
             content={({ closeDropdown }) => (
               <>
                 <div className='dropdown__settings'>
+                  <div className='test__settings-heading'>Difficulty:</div>
                   <Button
                     type='button'
                     className={`btn btn-select ${
@@ -89,6 +90,7 @@ const TestHeader = () => {
             content={({ closeDropdown }) => (
               <>
                 <div className='dropdown__settings'>
+                  <div className='test__settings-heading'>Mode:</div>
                   <Button
                     type='button'
                     className={`btn btn-select ${

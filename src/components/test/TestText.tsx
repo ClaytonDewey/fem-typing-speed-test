@@ -10,30 +10,15 @@ const TestText = () => {
         <p>Or click the text and start typing</p>
       </div>
       <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit sit
-        quis explicabo rem asperiores accusamus, dolorum doloribus nihil autem
-        illum, beatae quos quisquam repellat debitis et alias quam, nobis culpa.
-      </p>
-
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam modi
-        eveniet sit, non reiciendis nobis consequuntur? Modi, voluptate in
-        necessitatibus distinctio odit iste eius tenetur, eveniet tempora
-        deserunt asperiores illum! Doloribus quam sit repellendus nesciunt.
-      </p>
-
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-        reprehenderit dignissimos error amet suscipit a hic asperiores labore
-        omnis natus?
-      </p>
-
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et quia
-        quibusdam unde molestias fuga, exercitationem corporis earum laudantium
-        quaerat excepturi ratione delectus animi consequatur debitis nulla odit,
-        corrupti odio? Rerum consequatur nemo tempore nostrum modi, dolorum
-        fugiat aut eveniet aliquid?
+        The archaeological expedition unearthed artifacts that complicated
+        prevailing theories about Bronze Age trade networks. Obsidian from
+        Anatolia, lapis lazuli from Afghanistan, and amber from the
+        Baltic&mdash;all discovered in a single Mycenaean tomb&mdash;suggested
+        commercial connections far more extensive than previously hypothesized.
+        &quot;We&apos;ve underestimated ancient peoples&apos; navigational
+        capabilities and their appetite for luxury goods,&quot; the lead
+        researcher observed. &quot;Globalization isn&apos;t as modern as we
+        assume.&quot;
       </p>
     </section>
   );

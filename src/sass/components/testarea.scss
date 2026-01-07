@@ -48,12 +48,34 @@
     gap: rem(10);
     padding-block-end: rem(16);
 
+    &-heading {
+      display: none;
+    }
+
     .item {
       flex: 1;
       width: 100%;
 
       button {
         width: 100%;
+      }
+    }
+
+    @include breakpoint(tablet) {
+      justify-content: flex-start;
+      gap: rem(16);
+
+      .item {
+        flex: 0;
+        width: auto;
+
+        button {
+          width: auto;
+        }
+      }
+
+      &-heading {
+        display: inline-block;
       }
     }
   }

@@ -51,4 +51,41 @@
       }
     }
   }
+
+  @include breakpoint(tablet) {
+    & > button {
+      display: none;
+    }
+
+    &__content {
+      opacity: 1;
+      background-color: transparent;
+      position: relative;
+      padding-block: 0;
+      top: 0;
+      pointer-events: visible;
+
+      .btn-select {
+        position: relative;
+        border: rem(1) solid hsl(var(--clr-neutral-500));
+        justify-content: flex-start;
+        padding-inline: rem(10);
+
+        &::before {
+          content: none;
+        }
+
+        &.active {
+          border-color: hsl(var(--clr-blue-600));
+        }
+      }
+    }
+
+    &__settings {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: rem(6);
+    }
+  }
 }
